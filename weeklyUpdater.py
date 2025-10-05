@@ -3,7 +3,6 @@ import shutil
 import pandas as pd
 import os
 import subprocess
-from time import sleep
 
 DATA_SOURCE = "C:\\Users\\Avery\\OneDrive\\Desktop\\CS2 Project\\Data"
 DATA_DESTINATION = "C:\\Users\\Avery\\OneDrive\\Desktop\\HardWareWebsite"
@@ -46,3 +45,4 @@ def main():
     run_git_commands(DATA_DESTINATION, COMMIT_MESSAGE)
 
 main()
+x = input("Update was successful. You can close this command prompt now.")
