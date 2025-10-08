@@ -32,6 +32,7 @@ def copyCSV():
 def run_git_commands(repo_dir, commit_msg):
     """Run git add, commit, and push."""
     try:
+        subprocess.run(['git', 'pull', 'origin', 'main'], cwd=repo_dir, check=True)
         subprocess.run(['git', 'add', '.'], cwd=repo_dir, check=True)
         subprocess.run(['git', 'commit', '-m', commit_msg], cwd=repo_dir, check=True)
         subprocess.run(['git', 'push'], cwd=repo_dir, check=True)
